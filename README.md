@@ -83,6 +83,8 @@ This package is mainly used for the following Common Contents:
   ]
 ```
 
+- Please follow the common components to integrate.
+
 ## Integration of Common Styles
 
 - Using of Common Styles Import the below lines in the style.scss
@@ -92,6 +94,10 @@ This package is mainly used for the following Common Contents:
 ```
 
 - Use the below template to start the new menu component
+
+| Component Name | Component Template | Output Properties | Input Properties | Sample Data Format |
+| -------------- | ------------------ | ----------------- | ---------------- | ------------------ |
+| Breadcrumb |  | <winggy-breadcrumb [breadcrumbData]="breadcrumbData"></winggy-breadcrumb> | none | breadcrumbData | [{"name":"Home","path":null},{"name":"Menus","path":"/bulk-management"},{"name":"Bulk Management","path":"/bulk-management"},{"name":"Advanced Properties","path":null}] |
 
 ```html
 <div class="winggy-page-layout">
@@ -108,7 +114,7 @@ This package is mainly used for the following Common Contents:
 </div>
 ```
 
-Please follow the styles to integrate with the common styles.
+- Please follow the styles to integrate with the common styles.
 
 | Class Name            | Description                                      | Sample Classes        |
 | --------------------- | ------------------------------------------------ | --------------------- |
