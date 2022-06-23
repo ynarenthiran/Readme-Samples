@@ -85,6 +85,47 @@ This package is mainly used for the following Common Contents:
 
 - Please follow the common components to integrate.
 
+  - No data or Loader Component
+
+    - Template
+
+    ```html
+    <winggy-no-data [error]="error"></winggy-no-data>
+    ```
+
+    | Property Type | Property | Default Values | Sample Data Format |
+    | ------------- | -------- | -------------- | ------------------ |
+    | Input         | error    | null           | No data found      |
+
+  - Breadcrumb Component
+
+    - Template
+
+    ```html
+    <winggy-breadcrumb [breadcrumbData]="breadcrumbData"></winggy-breadcrumb>
+    ```
+
+    | Property Type | Property       | Default Values | Sample Data Format            |
+    | ------------- | -------------- | -------------- | ----------------------------- |
+    | Input         | breadcrumbData | []             | [{"name":"Home","path":null}] |
+
+  - Table Component
+    - Template
+    ```html
+    <winggy-table
+      [columns]="columns"
+      [data]="data"
+      (tableChanges)="tableChanges($event)"
+      (tableAction)="tableAction($event)"
+    ></winggy-table>
+    ```
+    | Property Type | Property     | Default Values | Sample Data Format | Description                                            |
+    | ------------- | ------------ | -------------- | ------------------ | ------------------------------------------------------ |
+    | Input         | columns      | []             | []                 | -                                                      |
+    | Input         | data         | []             | []                 | -                                                      |
+    | Output        | tableChanges | []             | -                  | Every Input Changes will reflect in this Output Event  |
+    | Output        | tableAction  | []             | -                  | Every Action Changes will reflect in this Output Event |
+
 ## Integration of Common Styles
 
 - Using of Common Styles Import the below lines in the style.scss
@@ -94,10 +135,6 @@ This package is mainly used for the following Common Contents:
 ```
 
 - Use the below template to start the new menu component
-
-| Component Name | Component Template                                                        | Output Properties | Input Properties | Sample Data Format                                                                                                                                                       |
-| -------------- | ------------------------------------------------------------------------- | ----------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Breadcrumb     | <winggy-breadcrumb [breadcrumbData]="breadcrumbData"></winggy-breadcrumb> | none              | breadcrumbData   | [{"name":"Home","path":null},{"name":"Menus","path":"/bulk-management"},{"name":"Bulk Management","path":"/bulk-management"},{"name":"Advanced Properties","path":null}] |
 
 ```html
 <div class="winggy-page-layout">
