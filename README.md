@@ -87,30 +87,59 @@ This package is mainly used for the following Common Contents:
 
   - No data or Loader Component
 
-    - Template
+    - HTML Template
 
     ```html
     <winggy-no-data [error]="error"></winggy-no-data>
     ```
 
-    | Property Type | Property | Default Values | Sample Data Format |
-    | ------------- | -------- | -------------- | ------------------ |
-    | Input         | error    | null           | No data found      |
+    - Properties
+
+      | Property Type | Property | Default Values | Parameters/Data Type |
+      | ------------- | -------- | -------------- | -------------------- |
+      | Input         | error    | No data found  | string               |
 
   - Breadcrumb Component
 
-    - Template
+    - HTML Template
 
     ```html
     <winggy-breadcrumb [breadcrumbData]="breadcrumbData"></winggy-breadcrumb>
     ```
 
-    | Property Type | Property       | Default Values | Sample Data Format            |
-    | ------------- | -------------- | -------------- | ----------------------------- |
-    | Input         | breadcrumbData | []             | [{"name":"Home","path":null}] |
+    - Properties
+
+      | Property Type | Property       | Default Values | Parameters/Data Type           |
+      | ------------- | -------------- | -------------- | ------------------------------ |
+      | Input         | breadcrumbData | []             | [{name: string, path: string}] |
+
+    - Sample Data Format
+
+    ```ts
+    breadcrumbData = [
+      {
+        name: "Home",
+        path: null,
+      },
+      {
+        name: "Menus",
+        path: "/menu-management/menu-builder",
+      },
+      {
+        name: "Menu Management",
+        path: "/menu-management/menu-builder",
+      },
+      {
+        name: "Edit Menus",
+        path: null,
+      },
+    ];
+    ```
 
   - Table Component
-    - Template
+
+    - HTML Template
+
     ```html
     <winggy-table
       [columns]="columns"
@@ -119,12 +148,128 @@ This package is mainly used for the following Common Contents:
       (tableAction)="tableAction($event)"
     ></winggy-table>
     ```
-    | Property Type | Property     | Default Values | Sample Data Format | Description                                            |
-    | ------------- | ------------ | -------------- | ------------------ | ------------------------------------------------------ |
-    | Input         | columns      | []             | []                 | -                                                      |
-    | Input         | data         | []             | []                 | -                                                      |
-    | Output        | tableChanges | []             | -                  | Every Input Changes will reflect in this Output Event  |
-    | Output        | tableAction  | []             | -                  | Every Action Changes will reflect in this Output Event |
+
+    - Properties
+
+      | Property Type | Property     | Default Values | Parameters/Data Type                                                                                                                                                                      | Description                                            |
+      | ------------- | ------------ | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+      | Input         | columns      | []             | [{ header: string, field: string, type: string(value/input/select/radio/checkbox/action), hideAllSelect: boolean, options: Array, selectOptions: Object, actions: Array, style: Object }] | -                                                      |
+      | Input         | data         | []             | [{}]                                                                                                                                                                                      | -                                                      |
+      | Output        | tableChanges | -              | -                                                                                                                                                                                         | Every Input Changes will reflect in this Output Event  |
+      | Output        | tableAction  | -              | -                                                                                                                                                                                         | Every Action Changes will reflect in this Output Event |
+
+    - Sample Data Format
+
+    ```ts
+    columns = [
+      {
+        header: "",
+        field: "expand",
+        type: "tree",
+      },
+      {
+        header: "",
+        field: "multiSelection",
+        type: "checkbox",
+        hideAllSelect: false,
+      },
+      {
+        header: "",
+        field: "singleSelection",
+        type: "radio",
+      },
+      {
+        header: "Name",
+        field: "name",
+        type: "value",
+        style: { width: "20%" },
+      },
+      {
+        header: "Sample Input",
+        field: "inputData",
+        type: "input",
+        style: { width: "20%" },
+      },
+      {
+        header: "Course",
+        field: "course",
+        type: "select",
+        style: { width: "20%" },
+        options: [
+          {
+            label: "Select",
+            value: "",
+          },
+          {
+            label: "None",
+            value: "None",
+          },
+          {
+            label: "Drinks",
+            value: "Drinks",
+          },
+          {
+            label: "Appetizers",
+            value: "Appetizers",
+          },
+          {
+            label: "Entrees",
+            value: "Entrees",
+          },
+          {
+            label: "Deserts",
+            value: "Deserts",
+          },
+        ],
+        selectOptions: {
+          label: "label",
+          value: "value",
+        },
+      },
+      {
+        header: "Actions",
+        field: "action",
+        type: "action",
+        style: { width: "20%" },
+        actions: [
+          {
+            icon: "edit",
+            title: "Edit",
+            action: "edit",
+          },
+          {
+            icon: "more_horiz",
+            title: "Menu",
+            contextMenu: [
+              {
+                name: "Archieve",
+                action: "archieve",
+              },
+            ],
+          },
+        ],
+      },
+    ];
+
+    data = [
+      {
+        name: "Food",
+        inputData: "Food",
+        course: "Drinks",
+        prepStations: "No Print",
+      },
+      {
+        name: "Drinks",
+        course: "",
+        prepStations: "",
+      },
+      {
+        name: "Open Items",
+        course: "",
+        prepStations: "",
+      },
+    ];
+    ```
 
 ## Integration of Common Styles
 
