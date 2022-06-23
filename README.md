@@ -79,14 +79,12 @@ This package is mainly used for the following Common Contents:
   @import "node_modules/winggy-angular/assets/scss/common";
 ```
 
-| heading1 | heading2 |
-| -------- | -------- |
-| 11       | 12       |
-
-| heading1 | heading2 |
-| --- | --- |
-| 11 | 12 |
-| 21 | 22 |
+| Name | Description | Sample Classes |
+| ---- | ----------- | -------------- |
+| winggy-w-* | Width in percentage from 1% to 100% | winggy-w-10 |
+| winggy-width-* | Width in vh from 1vh to 100vh | winggy-width-10 |
+| winggy-h-* | Height in percentage from 1% to 100% | winggy-h-10 |
+| winggy-height-* | Height in vh from 1vh to 100vh | winggy-height-10 |
 
 
 #### Author: [Narenthiran Y](http://github.com/ynarenthiran)
