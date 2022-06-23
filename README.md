@@ -2,12 +2,12 @@
 
 This package is mainly used for the following Common Contents:
 
-1. [**Installing winggy-angular Package**](<#installing-winggy-angular>)
-2. [**Integration of Common Modules**](<#integration-of-common-modules>)
-3. [**Integration of Common Translator Modules**](<#integration-of-common-translator-modules>)
-4. [**Integration of Common Services**](<#integration-of-common-services>)
-5. [**Integration of Common Components**](<#integration-of-common-components>)
-6. [**Integration of Common Styles**](<#integration-of-common-styles>)
+- [**Installing winggy-angular Package**](<#installing-winggy-angular>)
+- [**Integration of Common Modules**](<#integration-of-common-modules>)
+- [**Integration of Common Translator Modules**](<#integration-of-common-translator-modules>)
+- [**Integration of Common Services**](<#integration-of-common-services>)
+- [**Integration of Common Components**](<#integration-of-common-components>)
+- [**Integration of Common Styles**](<#integration-of-common-styles>)
 
 ## Installing winggy-angular
 ```
