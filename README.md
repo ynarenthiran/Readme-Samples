@@ -54,8 +54,6 @@ This package is mainly used for the following Common Contents:
   ) {}
 ```
 
-## Integration of Common Components
-
 * To initiate the translator service and update the language for the translator service, follow the lines
 
 ``` ts
@@ -69,6 +67,10 @@ This package is mainly used for the following Common Contents:
   this.commonService.setLanguage('english');
 ```
 
+## Integration of Common Components
+
+
+
 ## Integration of Common Styles
 
 * Using of Common Styles Import the below lines in the style.scss
@@ -76,6 +78,15 @@ This package is mainly used for the following Common Contents:
 ``` scss
   @import "node_modules/winggy-angular/assets/scss/common";
 ```
+
+| heading1 | heading2 |
+| -------- | -------- |
+| 11       | 12       |
+
+| heading1 | heading2 |
+| --- | --- |
+| 11 | 12 |
+| 21 | 22 |
 
 
 #### Author: [Narenthiran Y](http://github.com/ynarenthiran)
