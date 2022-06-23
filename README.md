@@ -95,9 +95,9 @@ This package is mainly used for the following Common Contents:
 
 - Use the below template to start the new menu component
 
-| Component Name | Component Template | Output Properties                                                         | Input Properties | Sample Data Format |
-| -------------- | ------------------ | ------------------------------------------------------------------------- | ---------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Breadcrumb     |                    | <winggy-breadcrumb [breadcrumbData]="breadcrumbData"></winggy-breadcrumb> | none             | breadcrumbData     | [{"name":"Home","path":null},{"name":"Menus","path":"/bulk-management"},{"name":"Bulk Management","path":"/bulk-management"},{"name":"Advanced Properties","path":null}] |
+| Component Name | Component Template                                                        | Output Properties | Input Properties | Sample Data Format                                                                                                                                                       |
+| -------------- | ------------------------------------------------------------------------- | ----------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Breadcrumb     | <winggy-breadcrumb [breadcrumbData]="breadcrumbData"></winggy-breadcrumb> | none              | breadcrumbData   | [{"name":"Home","path":null},{"name":"Menus","path":"/bulk-management"},{"name":"Bulk Management","path":"/bulk-management"},{"name":"Advanced Properties","path":null}] |
 
 ```html
 <div class="winggy-page-layout">
