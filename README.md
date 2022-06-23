@@ -2,8 +2,8 @@
 
 This package is mainly used for the following Common Contents:
 
-1. [**Installing winggy-angular Package**](<#Installing winggy-angular>)
-2. [**Integration of Common Modules**](<#Integration of Common Modules>)
+1. [**Installing winggy-angular Package**](<#installingwinggy-angular>)
+2. [**Integration of Common Modules**](<#integrationofCommonModules>)
 3. [**Integration of Common Translator Modules**](<#Integration of Common Translator Modules>)
 4. [**Integration of Common Services**](<#Integration of Common Services>)
 5. [**Integration of Common Components**](<#Integration of Common Components>)
